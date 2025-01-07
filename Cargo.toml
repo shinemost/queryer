@@ -1,7 +1,7 @@
 [workspace]
 
 members = [
-    "queryer",
+    "queryer", "queryer_js",
     "queryer_py"
 ]
 resolver = "2"

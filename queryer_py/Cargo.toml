@@ -1,0 +1,21 @@
+[package]
+name = "queryer_py"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "queryer_py"
+crate-type = ["cdylib"]
+
+
+
+[dependencies]
+queryer = {path = "../queryer"}
+tokio = {version = "1.42.0",features = ["full"]}
+
+[dependencies.pyo3]
+version = "0.23.3"
+features = ["extension-module"]
+
+[build-dependencies]
+pyo3-build-config = "0.23.3"

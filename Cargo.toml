@@ -2,6 +2,6 @@
 
 members = [
     "queryer", "queryer_js",
-    "queryer_py"
+    "queryer_py","daa-viewer/src-tauri"
 ]
 resolver = "2"

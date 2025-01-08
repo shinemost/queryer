@@ -13,6 +13,8 @@ async fn main() -> Result<()> {
         FROM {} where new_deaths >= 500 ORDER BY new_cases DESC LIMIT 1",
         url
     );
+
+    println!(">>> Sending SQL:\n{}", sql);
     let df1 = query(sql).await?;
     println!("{:?}", df1);
 

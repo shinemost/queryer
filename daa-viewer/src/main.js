@@ -6,13 +6,14 @@ let greetMsgEl;
  function query() {
   // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
   // greetMsgEl.textContent = await invoke("query", { name: greetInputEl.value });
-
+     const container = document.querySelector("#container");
   invoke('query', { sql: greetInputEl.value  })
       .then(data => {
-        const container = document.querySelector("#container");
         container.innerHTML = `<pre>${data}</pre>`;
       })
-      .catch(e => alert(e));
+      .catch(e => {
+          container.innerHTML = `<pre>${e}</pre>`;
+      });
 }
 
 window.addEventListener("DOMContentLoaded", () => {
